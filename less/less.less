@@ -1,0 +1,86 @@
+//@color:blue;
+//@width:300px;
+//@height:500px;
+//div{
+//  width:300px;
+//  height:500px;
+//  border:1px solid red;
+//}
+@import "arr";
+.container{
+  width:@num1*1-@minwidth;
+  margin:auto;
+  &>.row{
+  width:100%;
+    .clear;
+  }
+  &-fluid{
+    width:100%;
+   margin: auto;
+  }
+  &-fluid>.row{
+    width:100%;
+    .clear;
+  }
+}
+.col-s-hide{
+  display:none;
+}
+.col-m-hide{
+  display:block;
+}
+.col-s-hide{
+  display:block;
+}
+.loop (@type:s,@i:1) when (@i<=@col){
+  .container>.row>.col-@{type}-@{i}{
+    float:left;
+    width:@i/@col*100%;
+  }
+  .container-fluid>.row>.col-@{type}-@{i}{
+    float:left;
+    width:@i/@col*100%;
+  }
+  .loop(@type,@i+1);
+}
+.loop();
+@media screen and (min-width:@num1){
+  .container{
+    width:@num1;
+    margin:auto;
+  }
+  .col-s-hide{
+    display:block;
+  }
+  .col-m-hide{
+    display:none;
+  }
+  .col-s-hide{
+    display:none;
+  }
+  .loop(m);
+}
+@media screen and (min-width:@num2){
+  .container{
+    width:@num2;
+  }
+  .col-s-hide{
+    display:block;
+  }
+  .col-m-hide{
+    display:block;
+  }
+  .col-s-hide{
+    display:block;
+  }
+  .loop(l);
+}
+.clear(){
+  &:before,&:after{
+    content:"";
+    display:block;
+  }
+  &:after{
+    clear:both;
+  }
+}

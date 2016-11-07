@@ -1,0 +1,12 @@
+@color:blue;
+div{
+  color:@color;
+  background:@color;
+}
+.aa(@i:1) when(@i<10){
+  div@{i}{
+    width:100*@i*1px;
+  }
+  .aa(@i+1);
+}
+.aa();
