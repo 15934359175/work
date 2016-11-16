@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b50ca45-2c47-4fba-a7df-8045eee9649c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less.less" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/less.css" afterPath="$PROJECT_DIR$/css/less.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/arr.less" afterPath="$PROJECT_DIR$/less/arr.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/less.less" afterPath="$PROJECT_DIR$/less/less.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xys.html" afterPath="$PROJECT_DIR$/xys.html" />
-    </list>
+    <list default="true" id="7b50ca45-2c47-4fba-a7df-8045eee9649c" name="Default" comment="" />
     <ignored path="node.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -60,11 +52,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wodeshouye.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="wodeshouye.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index/wodeshouye.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3813708">
+            <state vertical-scroll-proportion="-6.0277777">
               <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="3D轮播图.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/3D轮播图.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4745167">
+              <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -379,7 +381,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="1" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14757709" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -746,14 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/3D轮播图.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14586994">
-          <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yudi.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.5">
@@ -772,8 +766,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index/wodeshouye.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3813708">
+        <state vertical-scroll-proportion="-6.0277777">
           <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3D轮播图.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4745167">
+          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
           <folding />
         </state>
       </provider>
