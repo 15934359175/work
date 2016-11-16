@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .scence{
+        width:200px;
+        height:300px;
+        padding:20px;
+        position:absolute;
+        left:0px;
+        top:0px;
+        right:0px;
+        bottom:0px;
+        margin:auto;
+        perspective: 800px;
+    }
+    .inner{
+        width:200px;
+        height:200px;
+        position:relative;
+        transform-style:preserve-3d;
+        /*transform-origin: center center 100px;!*立体图形的基准轴有三个参数*!*/
+    }
+    .inner:hover{
+        /*transform: rotateX(-180deg);*/
+        /*transform: rotate3d(x,y,z,角度);x,y,z三个值不能带单位，x,y,z是每一轴的单位向量*/
+        /*transform: rotate3d(0,0,1,90deg);*/
+    }
+    .inner div{
+        width:200px;
+        height:200px;
+        position:absolute;
+        left:0px;
+        top:0px;
+        font-size: 30px;
+        text-align: center;
+        line-height: 200px;
+    }
+    .inner div:nth-child(1){
+        transform: rotateX(90deg);
+        transform-origin:top;
+        background:red;
+    }
+    .inner div:nth-child(2){
+        transform: rotateY(-90deg);
+        transform-origin: left;
+        background:green;
+    }
+    .inner div:nth-child(3){
+        background:yellow;
+    }
+    .inner div:nth-child(4){
+        transform: rotateX(-90deg);
+        transform-origin:bottom;
+        background:blue;
+    }
+    .inner div:nth-child(5){
+        transform: rotateY(90deg);
+        transform-origin: right;
+        background:pink;
+    }
+    .inner div:nth-child(6){
+        background:purple;
+        transform:translateZ(200px);
+    }
+</style>
+<script>
+    window.onload=function(){
+        var inner=document.getElementsByClassName("inner")[0];
+        centerx=document.documentElement.clientWidth/2;
+        centery=document.documentElement.clientHeight/2;
+        document.onmousedown=function(e){
+            var cx= e.clientX;
+            var cy= e.clientY;
+            document.onmousemove=function(e){
+                var movex= e.clientX;
+                var movey= e.clientY;
+                var x=movex-centerx;
+                var y=movey-centery;
+                var mo=Math.sqrt(x*x+y*y);
+                var angle=Math.sqrt((movex-cx)*(movex-cx)+(movey-cy)*(movey-cy));
+                inner.style.transform="rotate3d("+-y/mo+","+x/mo+",0,"+angle+"deg)"
+
+            }
+            document.onmouseup=function(){
+                document.onmousemove=null;
+                document.onmouseup=null;
+            }
+        }
+
+    }
+</script>
+<body>
+    <div class="scence">
+        <div class="inner">
+            <div>01</div>
+            <div>02</div>
+            <div>03</div>
+            <div>04</div>
+            <div>05</div>
+            <div>06</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+body,html,div,ul,li,a{
+    padding:0px;
+    margin:0px;
+    list-style:none;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+    height:100%;
+    background:#323232;
+}
+.banner{
+    width:100%;
+    height:300px;
+    margin:auto;
+    position:relative;
+}
+.banner .imgbox{
+    width:100%;
+    height:100%;
+    float:right;
+    position:relative;
+}
+.banner .imgbox .image{
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0px;
+    top:0px;
+}
+.imgbox-left{
+    width:25%;
+    height:100%;
+    position: absolute;
+    left:0px;
+    top:0px;
+    z-index: 10;
+}
+.imgbox-right{
+    width:25%;
+    height:100%;
+    position: absolute;
+    right:0px;
+    top:0px;
+    z-index: 10;
+}
+.leftbtn{
+    width: 50px;
+    height:50px;
+    position: absolute;
+    top:0px;
+    bottom:0px;
+    left:20%;
+    text-align: center;
+    line-height:50px;
+    font-size: 25px;
+    border-radius: 50%;
+    background:#ccc;
+    margin: auto;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
+.rightbtn{
+    width: 50px;
+    height:50px;
+    position: absolute;
+    top:0px;
+    bottom:0px;
+    right:20%;
+    text-align: center;
+    line-height:50px;
+    font-size: 25px;
+    margin: auto;
+    border-radius: 50%;
+    background:#ccc;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
+.imgbox-left:hover .leftbtn{
+    opacity: 1;
+}
+.imgbox-right:hover .rightbtn{
+    opacity: 1;
+}
+.btns{
+    width:124px;
+    height:10px;
+    position:absolute;
+    bottom:30px;
+    left:0px;
+    right:0px;
+    margin:auto;
+    z-index: 200;
+}
+.btns .btn-list{
+    width:40px;
+    height:100%;
+    background:#ccc;
+    float:left;
+    margin-right:2px;
+}
+.btns .btn-list:last-child{
+    margin-right:0px;
+}
+.banner .jiahao{
+    width:50px;
+    height:50px;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 50px;
+    font-weight:900;
+    color:white;
+    z-index: 20;
+    cursor:pointer;
+    transition: transform .5s linear;
+}
+.banner .chahao{
+    width:50px;
+    height:50px;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 50px;
+    font-weight:900;
+    color:white;
+    z-index: 20;
+    cursor:pointer;
+    display:none;
+    transform: rotate(45deg);
+}
+.smallbox{
+    width:25%;
+    height:100%;
+    position:absolute;
+    top:0px;
+    left:0px;
+    background:#222222;
+    display:none;
+}
+.smallbox div{
+    width:100%;
+    height:33.333333%;
+    float:left;
+    color:white;
+    font-size:20px;
+    text-align: center;
+    border-bottom:1px solid #323232;
+}
+.smallbox div:hover{
+    background:#E61736;
+}
+
+@media screen and (min-width:1200px) {
+    .banner{
+        width:1200px;
+        height:500px;
+    }
+}
+/*@media screen and (min-width:960px) {*/
+    /*.banner{*/
+        /*width:960px;*/
+        /*height:400px;*/
+    /*}*/
+/*}*/
+/*@media screen and (min-width:750px) {*/
+    /*.banner{*/
+        /*width:750px;*/
+        /*height:300px;*/
+    /*}*/
+/*}*/
+
+
+
+

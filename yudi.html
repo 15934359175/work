@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    html,body{
+        width:100%;
+        height:100%;
+        background:#000;
+        margin:0px;
+        padding:0px;
+    }
+</style>
+<script>
+    window.onload=function(){
+        var cw=document.documentElement.clientWidth;
+        var ch=document.documentElement.clientHeight;
+        var arr=[];
+        for(var i=0;i<200;i++){
+            var div=document.createElement("div");
+            div.style.cssText="width:5px;color:white;height:5px;font-size:"+30*Math.random()+"px;position:absolute;top:10px;left:"+Math.random()*(cw-100)+"px;transition:transform 5s ease "+(1+8*Math.random())+"s";
+            div.innerHTML="&#10052";
+            document.body.appendChild(div);
+            arr.push(div);
+        }
+        setTimeout(function(){
+            for(var j=0;j<arr.length;j++){
+                arr[j].style.transform="translate(0,"+(ch-30)+"px)";
+                arr[j].addEventListener("webkitTransitionEnd",function(){
+                    this.style.transform="translate(0,0)";
+                    this.style.transition="none";
+                    var that=this;
+                    setTimeout(function(){
+                        that.style.transform="translate(0,"+(ch-30)+"px)";
+                        that.style.transition="transform 5s ease";
+
+                    })
+                })
+            }
+
+        },0)
+
+    }
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/less.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <style>
+        body,ul,li{
+            list-style:none;
+            padding:0px;
+            margin:0px;
+        }
+
+        .header{
+            width:100%;
+            height:45px;
+            background:black;
+            position: relative;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            color:#666;
+        }
+        .header>.container{
+            width:100%;
+        }
+        @media screen and (min-width:750px){
+            .header>.container {
+                width:100%;
+                height: 455px;
+            }
+        }
+        @media screen and (min-width:1000px){
+            .header>.container{
+                width:1000px;
+            }
+        }
+        .header div[class*="col"]{
+            height:45px;
+            line-height: 45px;
+            background:black;
+            text-align:center;
+        }
+        .banner{
+            width:100%;
+            height:auto;
+            position:relative;
+            height:580px;
+            overflow: hidden;
+        }
+        .banner .btnbox1,.btnbox2{
+            width:25%;
+            height:100%;
+            font-size: 30px;
+            position: absolute;
+        }
+        .btnbox2{
+            top:0px;
+            right:0px;
+            z-index:1000;
+        }
+        .btnbox1{
+            top:0px;
+            left:0px;
+            z-index:1000;
+        }
+        .btnbox1 .leftbtn{
+            width:50px;
+            height:50px;
+            border-radius: 50%;
+            background:#ccc;
+            position:absolute;
+            top:0px;
+            bottom:0px;
+            margin: auto;
+            line-height: 50px;
+            text-align: center;
+            left: 30%;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.5s ease ;
+        }
+        .btnbox2 .rightbtn{
+            width:50px;
+            height:50px;
+            border-radius: 50%;
+            background:#ccc;
+            position:absolute;
+            top:0px;
+            bottom:0px;
+            margin: auto;
+            right: 30%;
+            line-height: 50px;
+            text-align: center;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.5s ease ;
+        }
+        .btnbox1:hover .leftbtn{
+            opacity: 1;
+        }
+        .btnbox2:hover .rightbtn{
+            opacity:1;
+        }
+        .banner .imgbox{
+            width:100%;
+            height:100%;
+            float:left;
+            poosition:relative;
+        }
+        .imgbox li{
+            width:100%;
+            height:100%;
+            position:absolute;
+            top:0px;
+            left:0px;
+        }
+        .imgbox .one{
+            background:#000 url(../img/banner1s.jpg) no-repeat center bottom;
+            background-size: contain;
+        }
+        .imgbox .two{
+            background:#000 url(../img/banner2.jpg) no-repeat center bottom;
+            background-size: contain;
+            left:100%;
+        }
+        .banner .imgbox .three{
+            background:#000 url(../img/banner3.jpg) no-repeat center bottom;
+            background-size: cover;
+            left:100%;
+        }
+        .banner .button{
+            width:170px;
+            height:10px;
+            position: absolute;
+            left:0px;
+            right:0px;
+            margin: auto;
+            bottom:50px;
+            z-index: 1000;
+        }
+        .banner .button li{
+            width:50px;
+            height:10px;
+            float:left;
+            background:#00ff00;
+            margin-right: 10px;
+            position:relative;
+        }
+        .banner .button li>a{
+            height:10px;
+            width:0;
+            background:red;
+            position: absolute;
+            top:0px;
+            left:0px;
+        }
+
+        .banner .button li:last-child{
+            margin-right:0px;
+        }
+
+
+        .xuanxiang{
+            width:100%;
+            height:auto;
+            float:left;
+        }
+        .xuanxiang>.container{
+            width:100%;
+            height:auto;
+        }
+        .xuanxiang div[class*="col"]{
+            height:200px;
+            border:2px solid white;
+        }
+        .xuanxiang>.container img{
+            width:100%;
+            height: 200px;
+        }
+        @media screen and (min-width:750px){
+            .xuanxiang .container{
+                width:100%;
+            }
+            .xuanxiang .container img{
+                width:100%;
+            }
+        }
+        @media screen and (min-width:1000px){
+            .xuanxiang .container{
+                width:100%;
+            }
+            .xuanxiang .container img{
+                width:100%;
+            }
+        }
+        .bottom{
+            margin-top:5px;
+            width:100%;
+            height:auto;
+            background:#F2F2F2;
+            padding-top:15px;
+            padding-bottom:15px;
+        }
+        .bottom>.container>.row div[class*="col"]{
+            height:250px;
+            font-size: 12px;
+            padding-left:50px;
+        }
+        .bottom{
+            display:none;
+        }
+        @media screen and (min-width:750px){
+            .bottom>.container>.row div[class*="col"]{
+                height:310px;
+            }
+            .bottom{
+                display:block;
+            }
+        }
+        @media screen and (min-width:1000px){
+            .bottom>.container>.row div[class*="col"]{
+                height:250px;
+            }
+            .bottom{
+                display:block;
+            }
+        }
+        .bottom>.container>.row a{
+            font-family: "苹方";
+            display: block;
+            margin-top:2px;
+            color:#666;
+        }
+        .bottom>.container>.row a:hover{
+            text-decoration: underline;
+        }
+        .footer{
+            display:block;
+        }
+        .footer>.container {
+            margin-top:10px;
+            width:100%;
+            background:#F2F2F2;
+        }
+        .footer>.container div[class*="col"]{
+            width:100%;
+            padding-left:10px;
+            padding-right:10px;
+            height:auto;
+            font-size: 12px;
+            color:#565656;
+            line-height: 39px;
+        }
+        .footer>.container div[class*="col"]:before,.footer>.container div[class*="col"]:after{
+            content: "";
+            display:block;
+        }
+        .footer>.container div[class*="col"]:after{
+            clear: both;
+        }
+        .footer>.container div[class*="col"] ul{
+            float:left;
+            display:none;
+        }
+        .footer>.container div[class*="col"]>ul li{
+            width:100%;
+            height:100%;
+            line-height: 39px;
+        }
+        .footer>.container div[class*="col"]>span{
+            width:100%;
+            height:100%;
+            float: left;
+            margin-left: 5px;
+            line-height: 39px;
+            border-bottom: 1px solid #E3E3E3;
+        }
+        @media screen and (min-width:750px){
+            .footer{
+                display:none;
+            }
+        }
+        @media screen and (min-width:1000px){
+            .footer{
+                display:none;
+            }
+        }
+        .great{
+            width:100%;
+            height:70px;
+            padding-bottom:20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background:black;
+            position:absolute;
+            top:0px;
+            left:0px;
+            display:none;
+        }
+        .great ul{
+            width:100%;
+            height:auto;
+            background: black;
+            position: absolute;
+            left:0px;
+            top:40px;
+            z-index: 10000;
+        }
+        .great li{
+            width:100%;
+            height:49px;
+            padding:0 10px;
+        }
+        .great li>a{
+            float:left;
+            width:100%;
+            height:49px;
+            font-size: 20px;
+            line-height: 49px;
+            font-family: "San Francisco Display";
+            color:#ffe;
+            padding:0 15px;
+            border-bottom:1px solid #333333;
+        }
+        .great ul li:last-child a{
+            border-bottom: 1px solid #fff;
+        }
+        .great div[class*="col"]{
+            height:100%;
+        }
+        .great div[class*="col"]:nth-child(2) img{
+            float:left;
+            margin-left: 45%;
+        }
+        @media screen and (min-width:750px){
+            .great>.container{
+                width:100%;
+            }
+        }
+        @media screen and (min-width:1000px){
+            .great>.container{
+                width:100%;
+            }
+        }
+        .great .container:nth-child(2){
+            display: none;
+        }
+        .discript{
+            width:100%;
+            height:49px;
+            background:#F2F2F2;
+        }
+        .discript div[class*="col"]{
+            height:49px;
+            border-bottom: 1px solid #E3E3E3;
+        }
+    </style>
+</head>
+<body style="height:3000px">
+<div class="header">
+    <div class="container">
+
+
+
+
+
+        <div class="row">
+            <div class="col-l-hide col-m-hide col-s-1"><a href="#"><img src="../img/ap10.png" alt=""></a></div>
+            <div class="col-l-1 col-m-1 col-s-14"><a href="#"><img src="../img/ap1.png" alt=""></a></div>
+            <div class="col-l-2 col-m-2 col-s-hide"><a href="#"><img src="../img/ap2.png" alt=""></a></div>
+            <div class="col-l-2 col-m-2 col-s-hide"><a href="#"><img src="../img/ap3.png" alt=""></a></div>
+            <div class="col-l-2 col-m-2 col-s-hide"><a href="#"><img src="../img/ap4.png" alt=""></a></div>
+            <div class="col-l-2 col-m-2 col-s-hide"><a href="#"><img src="../img/ap5.png" alt=""></a></div>
+            <div class="col-l-2 col-m-2 col-s-hide"><a href="#"><img src="../img/ap6.png" alt=""></a></div>
+            <div class="col-l-2 col-m-2 col-s-hide"><a href="#"><img src="../img/ap7.png" alt=""></a></div>
+            <div class="col-l-2 col-m-2 col-s-hide"><a href="#"><img src="../img/ap8.png" alt=""></a></div>
+            <div class="col-l-1 col-m-1 col-s-1"><a href="#"><img src="../img/ap9.png" alt=""></a></div>
+        </div>
+    </div>
+
+
+    <div class="great">
+        <div class="container">
+            <div class="row">
+                <div class=" col-s-1"><img src="../img/ap11.png" alt=""></div>
+                <div class=" col-s-14" ><img src="../img/ap1.png" alt=""></div>
+                <div class=" col-s-1"></div>
+            </div>
+        </div>
+        <ul>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a href="#">技术支持</a></li>
+            <li><a href="#">搜索apple</a></li>
+        </ul>
+    </div>
+
+
+</div>
+<div class="banner">
+    <div class="btnbox1">
+        <div class="leftbtn">&lt;</div>
+    </div>
+    <ul class="imgbox">
+        <li class="one"></li>
+        <li class="two"></li>
+        <li class="three"></li>
+    </ul>
+    <div class="btnbox2">
+        <div class="rightbtn">&gt;</div>
+    </div>
+    <ul class="button">
+        <li><a href="javascript:;"></a></li>
+        <li><a href="javascript:;"></a></li>
+        <li><a href="javascript:;"></a></li>
+    </ul>
+</div>
+
+<div class="xuanxiang">
+    <div class="container">
+        <div class="row">
+            <div class="col-l-4 col-m-8 col-s-16"><img src="../img/bner1.jpg" alt=""></div>
+            <div class="col-l-4 col-m-8 col-s-16"><img src="../img/bner2.jpg" alt=""></div>
+            <div class="col-l-4 col-m-8 col-s-16"><img src="../img/bner3.jpg" alt=""></div>
+            <div class="col-l-4 col-m-8 col-s-16"><img src="../img/bner4.jpg" alt=""></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="discript">
+    <div class="container">
+        <div class="row">
+            <div class="col-l-16 col-s-16 col-m-16"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-l-3 col-m-3">
+                <p><b>选购及了解</b></p>
+                <a href="#"> Mac</a>
+                <a href="#">iPad</a>
+                <a href="#">iPhone</a>
+                <a href="#"> Watch</a>
+                <a href="#">Music</a>
+                <a href="#">iTunes</a>
+                <a href="#">iPod</a>
+                <a href="#">配件</a>
+            </div>
+            <div class="col-l-3 col-m-3">
+                <p><b> Apple Store 商店</b></p>
+                <a href="#">查找零售店</a>
+                <a href="#">  Genius Bar 天才吧</a>
+                <a href="#">讲座和学习</a>
+                <a href="#"> 青少年活动</a>
+                <a href="#"> Apple Store App</a>
+                <a href="#">iTunes</a>
+                <a href="#">翻新和优惠</a>
+                <a href="#">分期付款</a>
+                <a href="#">重复使用和循环利用</a>
+                <a href="#">订单状态</a>
+                <a href="#">选购帮助</a>
+            </div>
+            <div class="col-l-3 col-m-3">
+                <p><b>教育应用</b></p>
+                <a href="#">Apple与教育</a>
+                <a href="#">高校师生选购</a>
+                <a href="#">iPhone</a>
+                <p><b>商务应用</b></p>
+                <a href="#">Apple 与商务</a>
+                <a href="#">商务选购</a>
+            </div>
+            <div class="col-l-3 col-m-3">
+                <p><b>帐户</b></p>
+                <a href="#">管理你的 Apple ID</a>
+                <a href="#">Apple Store 帐户</a>
+                <a href="#">iCloud.com</a>
+                <p><b>Apple 价值观</b></p>
+                <a href="#">辅助功能</a>
+                <a href="#">环境责任</a>
+                <a href="#">隐私</a>
+                <a href="#">供应商责任</a>
+            </div>
+            <div class="col-l-4 col-m-4">
+                <p><b>关于 Apple</b></p>
+                <a href="#">Apple 资讯</a>
+                <a href="#">工作机会</a>
+                <a href="#">媒体资讯</a>
+                <a href="#">活动</a>
+                <a href="#">联系 Apple</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-s-16">
+                <span><b>选购及了解</b></span>
+                <ul>
+                    <li> <a href="#"> Mac</a></li>
+                    <li><a href="#">iPad</a></li>
+                    <li><a href="#">iPhone</a></li>
+                    <li><a href="#"> Watch</a></li>
+                    <li><a href="#">Music</a></li>
+                    <li><a href="#">iTunes</a></li>
+                    <li><a href="#">iPod</a></li>
+                    <li><a href="#">配件</a></li>
+                </ul>
+            </div>
+            <div class="col-s-16">
+                <span><b> Apple Store 商店</b></span>
+                <ul>
+                    <li> <a href="#">  Genius Bar 天才吧</a></li>
+                    <li><a href="#">讲座和学习</a></li>
+                    <li><a href="#"> 青少年活动</a></li>
+                    <li><a href="#"> Apple Store App</a></li>
+                    <li><a href="#">iTunes</a></li>
+                    <li><a href="#">翻新和优惠</a></li>
+                    <li><a href="#">分期付款</a></li>
+                    <li><a href="#">重复使用和循环利用</a></li>
+                    <li><a href="#">订单状态</a></li>
+                    <li><a href="#">选购帮助</a></li>
+                    <li> <a href="#">查找零售店</a></li>
+                </ul>
+            </div>
+            <div class="col-s-16">
+                <span><b>教育应用</b></span>
+                <ul>
+                    <li><a href="#">Apple与教育</a></li>
+                    <li><a href="#">高校师生选购</a></li>
+                    <li><a href="#">iPhone</a></li>
+                </ul>
+            </div>
+            <div class="col-s-16">
+                <span><b>商务应用</b></span>
+                <ul>
+                    <li><a href="#">Apple 与商务</a></li>
+                    <li><a href="#">商务选购</a></li>
+                </ul>
+            </div>
+            <div class="col-s-16">
+                <span><b>帐户</b></span>
+                <ul>
+                    <li><a href="#">管理你的 Apple ID</a></li>
+                    <li><a href="#">Apple Store 帐户</a></li>
+                    <li><a href="#">iCloud.com</a></li>
+                </ul>
+            </div>
+            <div class="col-s-16">
+                <span><b>Apple 价值观</b></span>
+                <ul>
+                    <li><a href="#">辅助功能</a></li>
+                    <li><a href="#">环境责任</a></li>
+                    <li><a href="#">隐私</a></li>
+                    <li><a href="#">供应商责任</a></li>
+                </ul>
+            </div>
+            <div class="col-s-16">
+                <span><b>关于 Apple</b></span>
+                <ul>
+                    <li><a href="#">Apple 资讯</a></li>
+                    <li><a href="#">工作机会</a></li>
+                    <li><a href="#">媒体资讯</a></li>
+                    <li><a href="#">活动</a></li>
+                    <li><a href="#">联系 Apple</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

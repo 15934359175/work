@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script>
+    window.onload=function(){
+        var ball=document.getElementsByClassName("ball")[0];
+        var radius=400;
+        for(var i=0;i<10;i++){
+            var x=radius*Math.sin(Math.PI/2)*Math.cos(i*36*Math.PI/180);
+            var z=radius*Math.sin(Math.PI/2)*Math.sin(i*36*Math.PI/180);
+            var y=radius*Math.cos(Math.PI/2);
+            var angle=Math.atan2(x,z);
+            var div=document.createElement("div");
+            div.style.cssText="width:200px;height:100px;position:absolute;top:0px;left:0px;right:0px;bottom:0px;margin:auto;background:red";
+            div.style.transform="translate3d("+x+"px,"+y+"px,"+z+"px) rotateY("+angle+"rad)";
+            ball.appendChild(div);
+        }
+        var cx=document.documentElement.clientWidth/2;
+        var cy=document.documentElement.clientHeight/2;
+       document.onmousedown=function(e){
+           var dx= e.clientX;
+           var dy= e.clientY;
+           document.onmousemove=function(e){
+               var movex= e.clientX;
+               var movey= e.clientY;
+               var x=movex-cx;
+               var y=movey-cy;
+               var mo=Math.sqrt(x*x+y*y);
+               var ange=Math.sqrt(Math.pow((movex-dx),2)+Math.pow((movey-dy),2));
+               ball.style.transform="rotate3d("+x/mo+","+y/mo+",0,"+ange+"deg)";
+           }
+           document.onmouseup=function(){
+               document.onmousemove=null;
+               document.onmouseup=null;
+           }
+       }
+
+    }
+</script>
+<style>
+    .scence{
+        width:70%;
+        height:300px;
+        position:fixed;
+        left:0px;
+        top:0px;
+        right:0px;
+        bottom:0px;
+        margin:auto;
+        perspective:800px;
+    }
+    .ball{
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0px;
+        left:0px;
+        transform-style: preserve-3d;
+        transition:transform 2s linear;
+    }
+    /*.ball:hover{*/
+        /*transform: rotateY(3600deg);*/
+    /*}*/
+</style>
+<body>
+<div class="scence">
+    <div class="ball"></div>
+</div>
+</body>
+</html>

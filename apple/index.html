@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/less.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <style>
+        body,ul,li{
+            list-style:none;
+            padding:0px;
+            margin:0px;
+        }
+
+        .header{
+            width:100%;
+            height:45px;
+            background:black;
+            position: relative;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            color:#666;
+        }
+        .header>.container{
+            width:100%;
+        }
+        @media screen and (min-width:750px){
+            .header>.container {
+                width:100%;
+                height: 455px;
+            }
+        }
+        @media screen and (min-width:1000px){
+            .header>.container{
+                width:1000px;
+            }
+        }
+        .header div[class*="col"]{
+            height:45px;
+            line-height: 45px;
+            background:black;
+            text-align:center;
+        }
+        .xuanxiang{
+            width:100%;
+            height:auto;
+            float:left;
+        }
+        .xuanxiang>.container{
+            width:100%;
+            height:auto;
+        }
+        .xuanxiang div[class*="col"]{
+            height:200px;
+            border:2px solid white;
+        }
+        .xuanxiang>.container img{
+            width:100%;
+            height: 200px;
+        }
+        .xuanxiang .row div:nth-child(1){
+            height:200px;
+            border:1px solid #fff;
+            background: url(../img/bner11.jpg) no-repeat center;
+            background-size: cover;
+        }
+        .xuanxiang .row div:nth-child(2){
+            height:200px;
+            border:1px solid #fff;
+            background: url(../img/bner21.jpg) no-repeat center;
+            background-size: cover;
+        }
+        .xuanxiang .row div:nth-child(3){
+            height:200px;
+            border:1px solid #fff;
+            background: url(../img/bner31.jpg) no-repeat center;
+            background-size: contain;
+        }
+        .xuanxiang .row div:nth-child(4){
+            height:200px;
+            border:1px solid #fff;
+            background: url(../img/bner41.jpg) no-repeat center;
+            background-size: cover;
+        }
+        @media screen and (min-width:750px){
+            .xuanxiang .container{
+                width:100%;
+            }
+            .xuanxiang .row div:nth-child(1){
+                height:200px;
+                border:1px solid #fff;
+                background:url(../img/bner11.jpg) no-repeat center;
+                background-size: cover;
+            }
+            .xuanxiang .row div:nth-child(2){
+                height:200px;
+                border:1px solid #fff;
+                background: url(../img/bner21.jpg) no-repeat center;
+                background-size: cover;
+            }
+            .xuanxiang .row div:nth-child(3){
+                height:200px;
+                border:1px solid #fff;
+                background: url(../img/bner31.jpg) no-repeat center;
+                background-size: cover;
+            }
+            .xuanxiang .row div:nth-child(4){
+                height:200px;
+                border:1px solid #fff;
+                background: url(../img/bner41.jpg) no-repeat center;
+                background-size: cover;
+            }
+        }
+        @media screen and (min-width:1000px){
+            .xuanxiang .container{
+                width:100%;
+            }
+            .xuanxiang .row div:nth-child(1){
+                height:200px;
+                border:1px solid #fff;
+                background: url(../img/bner12.jpg) no-repeat;
+                background-size: 100% 100%;
+            }
+            .xuanxiang .row div:nth-child(2){
+                height:200px;
+                border:1px solid #fff;
+                background: url(../img/bner22.jpg) no-repeat;
+                background-size: 100% 100%;
+            }
+            .xuanxiang .row div:nth-child(3){
+                height:200px;
+                border:1px solid #fff;
+                background: url(../img/bner32.jpg) no-repeat;
+                background-size: 100% 100%;
+            }
+            .xuanxiang .row div:nth-child(4){
+                height:200px;
+                border:1px solid #fff;
+                background: url(../img/bner42.jpg) no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+
+
+
+
+
+
+
+
+        .bottom{
+            margin-top:5px;
+            width:100%;
+            height:auto;
+            background:#F2F2F2;
+            padding-top:15px;
+            padding-bottom:15px;
+        }
+        .bottom>.container>.row div[class*="col"]{
+            height:250px;
+            font-size: 12px;
+            padding-left:50px;
+            margin-top: 15px;
+        }
+        .bottom{
+            display:none;
+        }
+        @media screen and (min-width:750px){
+            .bottom>.container>.row div[class*="col"]{
+                height:310px;
+            }
+            .bottom{
+                display:block;
+            }
+        }
+        @media screen and (min-width:1000px){
+            .bottom>.container>.row div[class*="col"]{
+                height:225px;
+            }
+            .bottom{
+                display:block;
+            }
+        }
+        .bottom>.container>.row a{
+            font-family: "苹方";
+            display: block;
+            margin-top:2px;
+            color:#666;
+        }
+        .bottom>.container>.row a:hover{
+            text-decoration: underline;
+        }
+        .footer{
+            display:block;
+        }
+        .footer>.container {
+            margin-top:10px;
+            width:100%;
+            background:#F2F2F2;
+        }
+        .footer>.container div[class*="col"]{
+            width:100%;
+            padding-left:10px;
+            padding-right:10px;
+            height:auto;
+            font-size: 12px;
+            color:#565656;
+            line-height: 39px;
+        }
+        .footer>.container div[class*="col"]:before,.footer>.container div[class*="col"]:after{
+            content: "";
+            display:block;
+        }
+        .footer>.container div[class*="col"]:after{
+            clear: both;
+        }
+        .footer>.container div[class*="col"] ul{
+            width:100%;
+            height:auto;
+            float:left;
+            display:none;
+        }
+        .footer>.container div[class*="col"]>ul li{
+            width:100%;
+            height:100%;
+            line-height: 39px;
+        }
+        .footer>.container div[class*="col"]>span{
+            width:100%;
+            height:100%;
+            float: left;
+            margin-left: 5px;
+            line-height: 39px;
+            border-bottom: 1px solid #E3E3E3;
+        }
+        @media screen and (min-width:750px){
+            .footer{
+                display:none;
+            }
+        }
+        @media screen and (min-width:1000px){
+            .footer{
+                display:none;
+            }
+        }
+        .footer .jiajia{
+            position: absolute;
+            right:30px;
+            font-size: 15px;
+            transition: transform 0.1s linear;
+        }
+
+
+
+        .great{
+            width:100%;
+            height:70px;
+            padding-bottom:20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background:black;
+            position:absolute;
+            top:0px;
+            left:0px;
+            display:none;
+        }
+        .great ul{
+            width:100%;
+            height:auto;
+            background: black;
+            position: absolute;
+            left:0px;
+            top:40px;
+            z-index: 10000;
+        }
+        .great li{
+            width:100%;
+            height:49px;
+            padding:0 10px;
+        }
+        .great li>a{
+            float:left;
+            width:100%;
+            height:49px;
+            font-size: 20px;
+            line-height: 49px;
+            font-family: "San Francisco Display";
+            color:#ffe;
+            padding:0 15px;
+            border-bottom:1px solid #333333;
+        }
+        .great ul li:last-child a{
+           border-bottom: 1px solid #fff;
+        }
+        .great div[class*="col"]{
+            height:100%;
+        }
+        .great div[class*="col"]:nth-child(2) img{
+           float:left;
+           margin-left: 45%;
+        }
+        .great div[class*="col"]:nth-child(1) img{
+            float:left;
+
+        }
+        @media screen and (min-width:750px){
+            .great>.container{
+                width:100%;
+            }
+        }
+        @media screen and (min-width:1000px){
+            .great>.container{
+                width:100%;
+            }
+        }
+        .great .container:nth-child(2){
+            display: none;
+        }
+        .discript{
+            width:100%;
+            height:49px;
+            background:#F2F2F2;
+        }
+        .discript div[class*="col"]{
+            height:49px;
+            font-size: 10px;
+            color:#B2B2B2;
+            line-height:49px;
+            border-bottom: 1px solid #E3E3E3;
+        }
+
+
+
+
+
+
+        /*轮播图*/
+        .banner{
+            height:580px;width:100%;position:relative;overflow: hidden;
+        }
+        .imgde{
+            width:100%;height:100%;position:relative;
+        }
+        .imgde .list{
+            position:absolute;
+            width:100%;height:100%;
+        }
+        .imgde .one{
+            background:#000 url(../img/banner1.jpg) no-repeat;
+            background-size:contain;
+            background-position: center bottom;
+        }
+        .imgde .two{
+            background:#000 url(../img/banner2.jpg) no-repeat;
+            background-size:contain;
+            background-position: center bottom;
+            left:100%;
+        }
+        .imgde .three{
+            background:#fff url(../img/banner3.jpg) no-repeat;
+            background-size:contain;
+            background-position: center bottom;
+            left:100%;
+        }
+        .leftbtn{
+            position:absolute;
+            top:0;bottom:0;
+            left:20px;margin:auto;
+            width:50px;height:50px;
+            border-radius:50%;
+            text-align:center;
+            line-height:50px;
+            font-size: 25px;
+            cursor:pointer;
+            background:#ccc;
+            opacity:0;
+            transition:opacity 0.5s linear;
+        }
+        .rightbtn{
+            position:absolute;
+            top:0;bottom:0;
+            right:20px;margin:auto;
+            width:50px;height:50px;
+            border-radius:50%;
+            text-align:center;
+            line-height:50px;
+            font-size: 25px;
+            cursor:pointer;
+            background:#ccc;
+            opacity:0;
+            transition:opacity 0.5s linear;
+        }
+        .left{
+            height:100%;
+            width:25%;
+            position:absolute;
+            left:0px;
+            top:0px;
+            z-index: 100;
+        }
+        .right{
+            height:100%;
+            width:25%;
+            position:absolute;
+            right:0px;
+            top:0px;
+            z-index: 100;
+        }
+        .left:hover>.leftbtn{
+            opacity:1;
+        }
+        .right:hover>.rightbtn{
+            opacity:1;
+        }
+        .btns {
+            width:170px;
+            height:2px;
+            position:absolute;
+            left:0px;right:0px;bottom:50px;
+            margin:auto;
+            z-index: 30;
+        }
+        .btns .btn-list{
+            float:left;
+            width:50px;
+            height:100%;
+            background:#DBDBDB;
+            margin-right:10px;
+            position:relative;
+        }
+        .btns .btn-list:last-child{
+            margin:0;
+        }
+        .btns .progress{
+            height:100%;
+            background:#808080;
+            width:0%;
+        }
+
+
+
+        .shopping{
+            width:290px;
+            height:325px;
+            border:1px solid #E3E3E3;
+            position:absolute;
+            right:5px;
+            top:47px;
+            background:white;
+            z-index: 10000;
+            display: none;
+        }
+        .sanjiao{
+            width:18px;
+            height:18px;
+            border-top:1px solid #E3E3E3;
+            border-left:1px solid #E3E3E3;
+            position: absolute;
+            top:38px;
+            right:37%;
+            background:white;
+            z-index: 100000;
+            display: none;
+            transform:rotate(45deg);
+        }
+        .shopping .title{
+            color: #999;
+            line-height: 90px;
+            text-align: center;
+            font-size: 1em;
+            font-family: inherit;
+        }
+        .shopping ul{
+            width:100%;
+            height:auto;
+            overflow: hidden;
+        }
+        .shopping ul:before,.shopping ul:after{
+            content:"";
+            display:block;
+        }
+        .shopping ul:after{
+            clear:both;
+        }
+        .shopping li{
+            width:100%;
+            padding:0px 20px;
+            height:45px;
+        }
+        .shopping li>a{
+            float:left;
+            width:100%;
+            height:100%;
+            color:#509DDA;
+            line-height: 45px;
+            font-size: 13px;
+            border-top:1px solid #E3E3E3;
+        }
+        .shopping li>a img{
+            float:left;
+        }
+        .shopping li>a span{
+            float:left;
+            margin-left:10px;
+        }
+        .shopping li>a span:hover{
+            text-decoration: underline;
+        }
+        .header div[class*="col"]:nth-child(10){
+            position:relative;
+        }
+
+
+
+
+        .dibu{
+            width:100%;
+            height:auto;
+            background:#F2F2F2;
+        }
+        .dibu div[class*="col"]{
+            height:30px;
+            line-height:30px;
+            font-size: 12px;
+            color:#B2B2B2;
+        }
+        .dibu div[class*="col"]:nth-child(1){
+            border-bottom:1px solid #E3E3E3;
+        }
+        .dibu div[class*="col"]:nth-child(1) a{
+          color:#5A8CCC;
+        }
+        .dibu div[class*="col"]:nth-child(1) a:hover{
+            color:#737373;
+            text-decoration: underline;
+        }
+        .dibu div[class*="col"]:nth-child(2){
+            height:60px;
+        }
+        .dibu div[class*="col"]:nth-child(2) a{
+            font-size: 12px;
+            padding:0px 10px;
+        }
+        .dibu div[class*="col"]:nth-child(2) a:hover{
+            text-decoration: underline;
+        }
+        .dibu div[class*="col"]:nth-child(2) a:last-child{
+            float:right;
+        }
+        .dibu div[class*="col"]:nth-child(2) a:last-child img{
+            float:left;
+        }
+        @media screen and (min-width:750px){
+            .dibu div[class*="col"]:nth-child(2){
+                height:30px;
+            }
+        }
+        @media screen and (min-width:1000px){
+            .dibu div[class*="col"]:nth-child(2){
+                height:30px;
+            }
+        }
+        @media screen and (max-width:570px){
+            .dibu .container{
+               width:100%;
+            }
+        }
+        @media screen and (max-width:520px){
+            .dibu .container{
+                width:100%;
+            }
+            .dibu div[class*="col"]:nth-child(1){
+                height:60px;
+            }
+        }
+        @media screen and (max-width:520px){
+            .dibu div[class*="col"]:nth-child(3){
+               display:none;
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-l-hide col-m-hide col-s-1"><a href="#"><img src="../img/ap10.png" alt=""></a></div>
+            <div class="col-l-1 col-m-1 col-s-14"><a href="#"><img src="../img/ap1.png" alt=""></a></div>
+            <div class="col-l-2 col-m-2 col-s-hide"><a href="#"><img src="../img/ap2.png" alt=""></a></div>
+            <div class="col-l-2 col-m-2 col-s-hide"><a href="#"><img src="../img/ap3.png" alt=""></a></div>
+            <div class="col-l-2 col-m-2 col-s-hide"><a href="#"><img src="../img/ap4.png" alt=""></a></div>
+            <div class="col-l-2 col-m-2 col-s-hide"><a href="#"><img src="../img/ap5.png" alt=""></a></div>
+            <div class="col-l-2 col-m-2 col-s-hide"><a href="#"><img src="../img/ap6.png" alt=""></a></div>
+            <div class="col-l-2 col-m-2 col-s-hide"><a href="#"><img src="../img/ap7.png" alt=""></a></div>
+            <div class="col-l-2 col-m-2 col-s-hide"><a href="#"><img src="../img/ap8.png" alt=""></a></div>
+            <div class="col-l-1 col-m-1 col-s-1">
+                <a href="#"><img src="../img/ap9.png" alt=""></a>
+                 <div class="sanjiao"></div>
+            </div>
+        </div>
+    </div>
+    <div class="great">
+        <div class="container">
+            <div class="row">
+                <div class=" col-s-1"><img src="../img/ap11.png" alt=""></div>
+                <div class=" col-s-14" ><img src="../img/ap1.png" alt=""></div>
+                <div class=" col-s-1"></div>
+            </div>
+        </div>
+        <ul>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a href="#">技术支持</a></li>
+            <li><a href="#">搜索apple</a></li>
+        </ul>
+    </div>
+
+    <div class="shopping">
+        <div class="title">你的购物车时空的</div>
+        <ul>
+            <li><a href="#"><img src="../img/sm1.png" alt=""><span>购物袋</span></a></li>
+            <li><a href="#"><img src="../img/sm2.png" alt=""><span>收藏</span></a></li>
+            <li><a href="#"><img src="../img/sm3.png" alt=""><span>订单</span></a></li>
+            <li><a href="#"><img src="../img/sm4.png" alt=""><span>账户</span></a></li>
+            <li><a href="#"><img src="../img/sm5.png" alt=""><span>登录</span></a></li>
+        </ul>
+    </div>
+</div>
+
+
+  <div class="banner">
+      <ul class="imgde">
+          <li class="one list"></li>
+          <li class="two list"></li>
+          <li class="three list"></li>
+      </ul>
+      <div class="btns">
+
+          <div class="btn-list">
+              <div class="progress"></div>
+          </div>
+          <div class="btn-list">
+              <div class="progress"></div>
+          </div>
+          <div class="btn-list">
+              <div class="progress"></div>
+          </div>
+
+      </div>
+      <div class="left">
+          <div class="leftbtn">&lt;</div>
+      </div>
+      <div class="right">
+          <div class="rightbtn">&gt;</div>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="xuanxiang">
+        <div class="container">
+            <div class="row">
+            <div class="col-l-4 col-m-8 col-s-16"></div>
+            <div class="col-l-4 col-m-8 col-s-16"></div>
+            <div class="col-l-4 col-m-8 col-s-16"></div>
+            <div class="col-l-4 col-m-8 col-s-16"></div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="discript">
+    <div class="container">
+        <div class="row">
+            <div class="col-l-16 col-s-16 col-m-16">
+                双镜头摄像头仅于 iPhone 7 Plus 提供。亮黑色外观仅于 128GB 及以上存储容量的机型提供。
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-l-3 col-m-3">
+                <p><b>选购及了解</b></p>
+                <a href="#"> Mac</a>
+                <a href="#">iPad</a>
+                <a href="#">iPhone</a>
+                <a href="#"> Watch</a>
+                <a href="#">Music</a>
+                <a href="#">iTunes</a>
+                <a href="#">iPod</a>
+                <a href="#">配件</a>
+            </div>
+            <div class="col-l-3 col-m-3">
+                <p><b> Apple Store 商店</b></p>
+                <a href="#">查找零售店</a>
+                <a href="#">  Genius Bar 天才吧</a>
+                <a href="#">讲座和学习</a>
+                <a href="#"> 青少年活动</a>
+                <a href="#"> Apple Store App</a>
+                <a href="#">iTunes</a>
+                <a href="#">翻新和优惠</a>
+                <a href="#">分期付款</a>
+                <a href="#">重复使用和循环利用</a>
+                <a href="#">订单状态</a>
+                <a href="#">选购帮助</a>
+            </div>
+            <div class="col-l-3 col-m-3">
+                <p><b>教育应用</b></p>
+                <a href="#">Apple与教育</a>
+                <a href="#">高校师生选购</a>
+                <a href="#">iPhone</a>
+                <p><b>商务应用</b></p>
+                <a href="#">Apple 与商务</a>
+                <a href="#">商务选购</a>
+            </div>
+            <div class="col-l-3 col-m-3">
+               <p><b>帐户</b></p>
+                <a href="#">管理你的 Apple ID</a>
+                <a href="#">Apple Store 帐户</a>
+                <a href="#">iCloud.com</a>
+                <p><b>Apple 价值观</b></p>
+                <a href="#">辅助功能</a>
+                <a href="#">环境责任</a>
+                <a href="#">隐私</a>
+                <a href="#">供应商责任</a>
+            </div>
+            <div class="col-l-4 col-m-4">
+                <p><b>关于 Apple</b></p>
+                <a href="#">Apple 资讯</a>
+                <a href="#">工作机会</a>
+                <a href="#">媒体资讯</a>
+                <a href="#">活动</a>
+                <a href="#">联系 Apple</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-s-16">
+                <div class="jiajia">+</div>
+                <span><b>选购及了解</b></span>
+                <ul>
+                    <li> <a href="#"> Mac</a></li>
+                    <li><a href="#">iPad</a></li>
+                    <li><a href="#">iPhone</a></li>
+                    <li><a href="#"> Watch</a></li>
+                    <li><a href="#">Music</a></li>
+                    <li><a href="#">iTunes</a></li>
+                    <li><a href="#">iPod</a></li>
+                    <li><a href="#">配件</a></li>
+                </ul>
+            </div>
+            <div class="col-s-16">
+                <div class="jiajia">+</div>
+                <span><b> Apple Store 商店</b></span>
+                <ul>
+                   <li> <a href="#">  Genius Bar 天才吧</a></li>
+                    <li><a href="#">讲座和学习</a></li>
+                    <li><a href="#"> 青少年活动</a></li>
+                    <li><a href="#"> Apple Store App</a></li>
+                    <li><a href="#">iTunes</a></li>
+                    <li><a href="#">翻新和优惠</a></li>
+                    <li><a href="#">分期付款</a></li>
+                    <li><a href="#">重复使用和循环利用</a></li>
+                    <li><a href="#">订单状态</a></li>
+                    <li><a href="#">选购帮助</a></li>
+                    <li> <a href="#">查找零售店</a></li>
+                </ul>
+            </div>
+            <div class="col-s-16">
+                <div class="jiajia">+</div>
+                <span><b>教育应用</b></span>
+                <ul>
+                    <li><a href="#">Apple与教育</a></li>
+                    <li><a href="#">高校师生选购</a></li>
+                    <li><a href="#">iPhone</a></li>
+                </ul>
+            </div>
+            <div class="col-s-16">
+                <div class="jiajia">+</div>
+                <span><b>商务应用</b></span>
+                <ul>
+                    <li><a href="#">Apple 与商务</a></li>
+                    <li><a href="#">商务选购</a></li>
+                </ul>
+            </div>
+            <div class="col-s-16">
+                <div class="jiajia">+</div>
+                <span><b>帐户</b></span>
+                <ul>
+                    <li><a href="#">管理你的 Apple ID</a></li>
+                    <li><a href="#">Apple Store 帐户</a></li>
+                    <li><a href="#">iCloud.com</a></li>
+                </ul>
+            </div>
+            <div class="col-s-16">
+                <div class="jiajia">+</div>
+                <span><b>Apple 价值观</b></span>
+                <ul>
+                    <li><a href="#">辅助功能</a></li>
+                    <li><a href="#">环境责任</a></li>
+                    <li><a href="#">隐私</a></li>
+                    <li><a href="#">供应商责任</a></li>
+                </ul>
+            </div>
+            <div class="col-s-16">
+                <span><b>关于 Apple</b></span>
+                <div class="jiajia">+</div>
+                <ul>
+                    <li><a href="#">Apple 资讯</a></li>
+                    <li><a href="#">工作机会</a></li>
+                    <li><a href="#">媒体资讯</a></li>
+                    <li><a href="#">活动</a></li>
+                    <li><a href="#">联系 Apple</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+ <div class="dibu">
+     <div class="container">
+         <div class="row">
+             <div class="col-l-16 col-m-16 col-s-16">
+                 <span>更多选购方式：前往 <a href="#">Apple Store </a>零售店，致电 400-666-8800 或查找在你附近的 <a href="#">授权经销商</a>。</span>
+             </div>
+             <div class="col-l-16 col-m-16 col-s-16">
+                 <span>Copyright © 2016 Apple Inc. 保留所有权利。<a href="#">隐私政策 </a>|<a href="#">使用条款</a>|<a href="#">销售政策</a>|<a href="#"> 法律信息 </a>|<a href="#">网站地图</a>
+                     <a href="#"><img src="../img/zg.png" alt="">中国</a></span>
+             </div>
+             <div class="col-l-16 col-m-16 col-s-16" >京公安网安备 11010502008968 京ICP备10214630</div>
+         </div>
+     </div>
+ </div>
+
+
+</body>
+</html>

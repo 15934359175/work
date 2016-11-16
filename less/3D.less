@@ -1,0 +1,34 @@
+//.loop(@type:s,@i:1) when(@i<=@col){
+//  .container>.row>.col-@{type}-@{i}{
+//    float:left;
+//    width:@i/@col*100%;
+//  }
+//  .container-fluid>.row>.col-@{type}-@{i}{
+//    float:left;
+//    width:@i/@col*100%;
+//  }
+//  .loop(@type,@i+1);
+//}
+//.loop();
+//@keyframes one {
+//
+//
+//}
+.loop(@i:0) when(@i<=100){
+  @s:@i*1%;
+  .one();
+  .one() when(@i<=50){
+        @{s}{
+            transform:rotateY(@i*0.9deg) scale(1-@i*0.01,1-@i*0.01)
+         }
+     }
+  .one() when(@i>50){
+      @{s}{
+        transform:rotateY(@i*0.9deg) scale(@i*0.01,@i*0.01);
+      }
+  }
+  .loop(@i+1);
+}
+@keyframes one {
+  .loop();
+}

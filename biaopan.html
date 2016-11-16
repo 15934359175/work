@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .clock{
+        width:200px;
+        height:200px;
+        border:2px solid #ccc;
+        border-radius: 50%;
+        position:absolute;
+        left:0px;
+        right:0px;
+        top:0px;
+        bottom:0px;
+        margin:auto;
+    }
+
+</style>
+<script>
+    window.onload=function(){
+        var w,h;
+        var time=new Date();
+        var clock=document.querySelector(".clock");
+        var hpointer= createPointer(6,40,"black",time.getHours()*30+time.getMinutes()*6/12);
+        var mpointer= createPointer(4,50,"black",time.getMinutes()*6+time.getSeconds()*6/60);
+        var spointer= createPointer(2,70,"black",time.getSeconds()*6);
+        function createMark(){
+            for(var i= 0;i<60;i++){
+                if(i%5==0){
+                    w=4;
+                    h=8;
+                }else{
+                    w=2;
+                    h=6;
+                }
+                var div=document.createElement("div");
+                div.style.cssText="width:"+w+"px;height:"+h+"px;background:black;position:absolute;top:0px;left:0px";
+                div.style.transform="translate("+(200-w)/2+"px,0) rotate("+i*6+"deg)"
+                div.style.transformOrigin="center 100px";
+                clock.appendChild(div);
+            }
+        }
+        createMark();
+        function createPointer(w,h,c,a){
+            var div=document.createElement("div");
+            div.style.cssText="width:"+w+"px;height:"+h+"px;background:"+c+";position:absolute;left:0px;top:0;";
+            div.style.transform="translate("+(200-w)/2+"px,"+(100-h)+"px) rotate("+a+"deg)";
+            div.style.transformOrigin="center bottom";
+            div.h=h;
+            div.w=w;
+            clock.appendChild(div);
+            return div;
+        }
+
+        setInterval(function(){
+            var time=new Date();
+            hpointer.style.transform="translate("+(200-hpointer.w)/2+"px,"+(100-hpointer.h)+"px) rotate("+(time.getHours()*30+time.getMinutes()*6/12)+"deg)";
+            mpointer.style.transform="translate("+(200-mpointer.w)/2+"px,"+(100-mpointer.h)+"px) rotate("+(time.getMinutes()*6+time.getSeconds()*6/60)+"deg)";
+            spointer.style.transform="translate("+(200-spointer.w)/2+"px,"+(100-spointer.h)+"px) rotate("+(time.getSeconds()*6)+"deg)";
+        },1000);
+
+    }
+
+</script>
+<body>
+  <div class="clock"></div>
+</body>
+</html>

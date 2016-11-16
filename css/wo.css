@@ -1,35 +1,29 @@
 .container {
   width: 900px;
+  width: 100%;
   margin: auto;
 }
 .container > .row {
   width: 100%;
 }
-.container > .row:before,
-.container > .row:after {
+.container > .row.before,
+.container > .row.after {
   content: "";
   display: block;
 }
-.container > .row:after {
+.container > .row.after {
   clear: both;
-}
-.container-fluid {
-  width: 100%;
-  margin: auto;
 }
 .container-fluid > .row {
   width: 100%;
 }
-.container-fluid > .row:before,
-.container-fluid > .row:after {
+.container-fluid > .row.before,
+.container-fluid > .row.after {
   content: "";
   display: block;
 }
-.container-fluid > .row:after {
+.container-fluid > .row.after {
   clear: both;
-}
-.col-s-hide {
-  display: none;
 }
 .container > .row > .col-s-1 {
   float: left;
@@ -127,19 +121,131 @@
   float: left;
   width: 100%;
 }
+.col-s-hide {
+  display: none;
+}
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
-    margin: auto;
+  }
+  .container .col-s-hide {
+    display: block;
+  }
+  .container .col-m-hide {
+    display: none;
+  }
+  .container .col-l-hide {
+    display: block;
+  }
+  .container > .row > .col-l-1 {
+    float: left;
+    width: 8.33333333%;
+  }
+  .container-fluid > .row > .col-l-1 {
+    float: left;
+    width: 8.33333333%;
+  }
+  .container > .row > .col-l-2 {
+    float: left;
+    width: 16.66666667%;
+  }
+  .container-fluid > .row > .col-l-2 {
+    float: left;
+    width: 16.66666667%;
+  }
+  .container > .row > .col-l-3 {
+    float: left;
+    width: 25%;
+  }
+  .container-fluid > .row > .col-l-3 {
+    float: left;
+    width: 25%;
+  }
+  .container > .row > .col-l-4 {
+    float: left;
+    width: 33.33333333%;
+  }
+  .container-fluid > .row > .col-l-4 {
+    float: left;
+    width: 33.33333333%;
+  }
+  .container > .row > .col-l-5 {
+    float: left;
+    width: 41.66666667%;
+  }
+  .container-fluid > .row > .col-l-5 {
+    float: left;
+    width: 41.66666667%;
+  }
+  .container > .row > .col-l-6 {
+    float: left;
+    width: 50%;
+  }
+  .container-fluid > .row > .col-l-6 {
+    float: left;
+    width: 50%;
+  }
+  .container > .row > .col-l-7 {
+    float: left;
+    width: 58.33333333%;
+  }
+  .container-fluid > .row > .col-l-7 {
+    float: left;
+    width: 58.33333333%;
+  }
+  .container > .row > .col-l-8 {
+    float: left;
+    width: 66.66666667%;
+  }
+  .container-fluid > .row > .col-l-8 {
+    float: left;
+    width: 66.66666667%;
+  }
+  .container > .row > .col-l-9 {
+    float: left;
+    width: 75%;
+  }
+  .container-fluid > .row > .col-l-9 {
+    float: left;
+    width: 75%;
+  }
+  .container > .row > .col-l-10 {
+    float: left;
+    width: 83.33333333%;
+  }
+  .container-fluid > .row > .col-l-10 {
+    float: left;
+    width: 83.33333333%;
+  }
+  .container > .row > .col-l-11 {
+    float: left;
+    width: 91.66666667%;
+  }
+  .container-fluid > .row > .col-l-11 {
+    float: left;
+    width: 91.66666667%;
+  }
+  .container > .row > .col-l-12 {
+    float: left;
+    width: 100%;
+  }
+  .container-fluid > .row > .col-l-12 {
+    float: left;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .container {
+    width: 900px;
   }
   .col-s-hide {
     display: block;
   }
   .col-l-hide {
-    display: block;
+    display: none;
   }
   .col-m-hide {
-    display: none;
+    display: block;
   }
   .container > .row > .col-m-1 {
     float: left;
@@ -238,112 +344,112 @@
     width: 100%;
   }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 600px) {
   .container {
-    width: 900px;
+    width: 600px;
   }
   .col-s-hide {
-    display: block;
-  }
-  .col-m-hide {
     display: block;
   }
   .col-l-hide {
     display: none;
   }
-  .container > .row > .col-l-1 {
+  .col-m-hide {
+    display: block;
+  }
+  .container > .row > .col-c-1 {
     float: left;
     width: 8.33333333%;
   }
-  .container-fluid > .row > .col-l-1 {
+  .container-fluid > .row > .col-c-1 {
     float: left;
     width: 8.33333333%;
   }
-  .container > .row > .col-l-2 {
+  .container > .row > .col-c-2 {
     float: left;
     width: 16.66666667%;
   }
-  .container-fluid > .row > .col-l-2 {
+  .container-fluid > .row > .col-c-2 {
     float: left;
     width: 16.66666667%;
   }
-  .container > .row > .col-l-3 {
+  .container > .row > .col-c-3 {
     float: left;
     width: 25%;
   }
-  .container-fluid > .row > .col-l-3 {
+  .container-fluid > .row > .col-c-3 {
     float: left;
     width: 25%;
   }
-  .container > .row > .col-l-4 {
+  .container > .row > .col-c-4 {
     float: left;
     width: 33.33333333%;
   }
-  .container-fluid > .row > .col-l-4 {
+  .container-fluid > .row > .col-c-4 {
     float: left;
     width: 33.33333333%;
   }
-  .container > .row > .col-l-5 {
+  .container > .row > .col-c-5 {
     float: left;
     width: 41.66666667%;
   }
-  .container-fluid > .row > .col-l-5 {
+  .container-fluid > .row > .col-c-5 {
     float: left;
     width: 41.66666667%;
   }
-  .container > .row > .col-l-6 {
+  .container > .row > .col-c-6 {
     float: left;
     width: 50%;
   }
-  .container-fluid > .row > .col-l-6 {
+  .container-fluid > .row > .col-c-6 {
     float: left;
     width: 50%;
   }
-  .container > .row > .col-l-7 {
+  .container > .row > .col-c-7 {
     float: left;
     width: 58.33333333%;
   }
-  .container-fluid > .row > .col-l-7 {
+  .container-fluid > .row > .col-c-7 {
     float: left;
     width: 58.33333333%;
   }
-  .container > .row > .col-l-8 {
+  .container > .row > .col-c-8 {
     float: left;
     width: 66.66666667%;
   }
-  .container-fluid > .row > .col-l-8 {
+  .container-fluid > .row > .col-c-8 {
     float: left;
     width: 66.66666667%;
   }
-  .container > .row > .col-l-9 {
+  .container > .row > .col-c-9 {
     float: left;
     width: 75%;
   }
-  .container-fluid > .row > .col-l-9 {
+  .container-fluid > .row > .col-c-9 {
     float: left;
     width: 75%;
   }
-  .container > .row > .col-l-10 {
+  .container > .row > .col-c-10 {
     float: left;
     width: 83.33333333%;
   }
-  .container-fluid > .row > .col-l-10 {
+  .container-fluid > .row > .col-c-10 {
     float: left;
     width: 83.33333333%;
   }
-  .container > .row > .col-l-11 {
+  .container > .row > .col-c-11 {
     float: left;
     width: 91.66666667%;
   }
-  .container-fluid > .row > .col-l-11 {
+  .container-fluid > .row > .col-c-11 {
     float: left;
     width: 91.66666667%;
   }
-  .container > .row > .col-l-12 {
+  .container > .row > .col-c-12 {
     float: left;
     width: 100%;
   }
-  .container-fluid > .row > .col-l-12 {
+  .container-fluid > .row > .col-c-12 {
     float: left;
     width: 100%;
   }
