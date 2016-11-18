@@ -1,2 +1,3 @@
-var bb=require("./aa.js");
-bb.aa();
+//var bb=require("./aa.js");
+//bb.aa();
+asdfasdfasdf

@@ -1,0 +1,48 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontForge 20120731 at Wed Nov 16 11:34:30 2016
+ By admin
+</metadata>
+<defs>
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face 
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    panose-1="2 0 6 3 0 0 0 0 0 0"
+    ascent="896"
+    descent="-128"
+    x-height="792"
+    bbox="7 -121 1017 889"
+    underline-thickness="0"
+    underline-position="0"
+    unicode-range="U+0078-E68B"
+  />
+<missing-glyph 
+ />
+    <glyph glyph-name=".notdef" 
+ />
+    <glyph glyph-name=".notdef" 
+ />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" horiz-adv-x="341" 
+ />
+    <glyph glyph-name="x" unicode="x" horiz-adv-x="1001" 
+d="M281 543q-27 -1 -53 -1h-83q-18 0 -36.5 -6t-32.5 -18.5t-23 -32t-9 -45.5v-76h912v41q0 16 -0.5 30t-0.5 18q0 13 -5 29t-17 29.5t-31.5 22.5t-49.5 9h-133v-97h-438v97zM955 310v-52q0 -23 0.5 -52t0.5 -58t-10.5 -47.5t-26 -30t-33 -16t-31.5 -4.5q-14 -1 -29.5 -0.5
+t-29.5 0.5h-32l-45 128h-439l-44 -128h-29h-34q-20 0 -45 1q-25 0 -41 9.5t-25.5 23t-13.5 29.5t-4 30v167h911zM163 247q-12 0 -21 -8.5t-9 -21.5t9 -21.5t21 -8.5q13 0 22 8.5t9 21.5t-9 21.5t-22 8.5zM316 123q-8 -26 -14 -48q-5 -19 -10.5 -37t-7.5 -25t-3 -15t1 -14.5
+t9.5 -10.5t21.5 -4h37h67h81h80h64h36q23 0 34 12t2 38q-5 13 -9.5 30.5t-9.5 34.5q-5 19 -11 39h-368zM336 498v228q0 11 2.5 23t10 21.5t20.5 15.5t34 6h188q31 0 51.5 -14.5t20.5 -52.5v-227h-327z" />
+    <glyph glyph-name="geiwomenpingfen" unicode="&#xe625;" 
+d="M862 499l97 98l-150 151l-98 -98l-29 -29l-466 -466v0l-55 -206l205 55v0l496 495v0zM219 7l18 68l50 -49zM809 690l93 -93l-69 -69l-93 93zM804 499l-466 -466l-93 93l466 466z" />
+    <glyph glyph-name="fenxianggeihaoyou" unicode="&#xe65c;" 
+d="M819 832h-614q-58 0 -99.5 -41.5t-41.5 -99.5v-614q0 -58 41.5 -99.5t99.5 -41.5h614q58 0 99.5 41.5t41.5 99.5v614q0 58 -41.5 99.5t-99.5 41.5zM762 282v0q-5 0 -9 4t-4 8l-7 314l-499 -499q-6 -7 -12.5 -7t-12.5 7q-10 9 0 19l499 499l-307 7q-5 0 -9 4t-4 8.5t4 8.5
+t9 4l345 -6q5 0 9 -4t4 -9l6 -346q0 -4 -4 -8t-8 -4z" />
+    <glyph glyph-name="geidan" unicode="&#xe68b;" 
+d="M512 -121q103 0 196.5 40t161 107.5t107.5 161t40 196.5t-40 196.5t-107.5 161t-161 107.5t-196.5 40t-196.5 -40t-161 -107.5t-107.5 -161t-40 -196.5t40 -196.5t107.5 -161t161 -107.5t196.5 -40zM593 620l2 -20h73l4 20h69l-4 -20h14v-183q2 -40 -38 -36h-203v219h16
+l-2 20h69zM595 494q0 -4 6 -4h6v61h-52v-122h54v23h-22q-16 -2 -20 20l-8 63h30zM703 553h-51v-63h4q4 0 4 4l4 41h29l-3 -65q-2 -18 -20 -18h-16v-23h41q8 -2 8 10v114zM516 364h233v-168q2 -32 -36 -30h-197v198zM581 285h105v31h-105v-31zM680 214q6 0 6 4v23h-105v-27
+h99zM500 612v-331h-53v272h-81v-274h-53v333h187zM384 529h49v-223l30 -86q2 -4 10 -4h21v-48h-47q-22 0 -26 18l-14 47l-15 -47q-6 -20 -30 -18h-47v48h23q8 0 10 6l36 82v225z" />
+  </font>
+</defs></svg>

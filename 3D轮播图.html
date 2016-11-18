@@ -84,12 +84,13 @@
 
         var centerx=document.documentElement.clientWidth/2;
         var centery=document.documentElement.clientHeight/2;
+        alert(c)
         document.onmousedown=function(e){
          var dx= e.clientX;
          var dy= e.clientY;
             document.onmousemove=function(e){
                 movex= e.clientX;
-                movey= e.clientY;
+                moveY= e.clientY;
                 var x=movex-centerx;
                 var y=movey-centery;
                 var mo=Math.sqrt(x*x+y*y);

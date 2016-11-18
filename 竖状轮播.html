@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .boxs{
+        width:300px;
+        height:267px;
+        position:fixed;
+        left:0px;
+        top:0px;
+        bottom:0px;
+        right:0px;
+        margin:auto;
+    }
+</style>
+<script>
+    window.onload=function(){
+        var boxs=document.querySelector(".boxs");
+        var widths=parseInt(getComputedStyle(boxs,null)["width"]);
+        var heights=parseInt(getComputedStyle(boxs,null)["height"]);
+        var nums=4;
+        var arr=[];
+        for(var i=0;i<nums;i++){
+            var sence=document.createElement("div");
+            sence.style.cssText="width:"+widths/nums+"px;height:"+heights+"px;position:absolute;top:0px;left:"+i*widths/nums+"px";
+            var box=document.createElement("div");
+            box.style.cssText="width:100%;height:100%;position:absolute;top:0px;left:0px;transform-style:preserve-3d;transition:transform 2s ease "+i*0.5+"s;transform-origin:center center "+(-widths/2)+"px";
+            for(var j=0;j<6;j++){
+                var panle=document.createElement("div");
+                panle.style.cssText="position:absolute;top:0px;left:0px";
+                if(j==0){
+                  panle.style.width=heights+"px";
+                  panle.style.height=heights+"px";
+                  panle.style.transformOrigin="left";
+                  panle.style.background="#000";
+                  panle.style.transform="rotateY(90deg)";
+                }else if(j==1){
+                    panle.style.width=widths/nums+"px";
+                    panle.style.height=heights+"px";
+                    panle.style.transformOrigin="bottom";
+                    panle.style.transform="rotateX(90deg)";
+                    panle.style.background="url(img/1.png) no-repeat "+-i*widths/nums+"px 0";
+                }else if(j==2){
+                    panle.style.width=widths/nums+"px";
+                    panle.style.height=heights+"px";
+                    panle.style.transformOrigin="top";
+                    panle.style.transform="rotateX(-90deg)";
+                    panle.style.background="url(img/2.png) no-repeat "+-i*widths/nums+"px 0";
+              }else if(j==3){
+                    panle.style.width=heights+"px";
+                    panle.style.height=heights+"px";
+                    panle.style.transformOrigin="right";
+                    panle.style.background="#000";
+                    panle.style.transform="translate("+-(heights-widths/nums)+"px,0) rotateY(-90deg)";
+                }else if(j==4){
+                    panle.style.width=widths/nums+"px";
+                    panle.style.height=heights+"px";
+                    panle.style.transform="translateZ("+-heights+"px)";
+                    panle.style.background="url(img/3.png) no-repeat "+-i*widths/nums+"px 0";
+                }else if(j==5){
+                    panle.style.width=widths/nums+"px";
+                    panle.style.height=heights+"px";
+                    panle.style.background="url(img/4.png) no-repeat "+-i*widths/nums+"px 0";
+                }
+                box.appendChild(panle);
+            }
+            arr.push(box);
+            sence.appendChild(box);
+            boxs.appendChild(sence);
+        }
+        var init=0;
+        setInterval(function(){
+            init+=90;
+            for(var k=0;k<arr.length;k++){
+                arr[k].style.transform="rotateX("+init+"deg)"
+            }
+        },4000)
+    }
+</script>
+<body>
+<div class="boxs"></div>
+</body>
+</html>
